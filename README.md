@@ -14,4 +14,4 @@ Mas voce também pode colocar informações de quanto de poder de desbravamento 
 > Abra o `RastroHSR-1.0.bat`
 
 # Deixe seu feedback!
-Se encontrar algum erro, ou tiver alguma coisa que acharia legal de ser adicionada, me fale em `pguimenezes.dev@gmail.com`
+Ainda em desenvolvimento se encontrar algum erro, ou tiver alguma coisa que acharia legal de ser adicionada, me fale em `pguimenezes.dev@gmail.com`.
