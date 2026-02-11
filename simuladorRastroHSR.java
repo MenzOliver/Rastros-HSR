@@ -27,9 +27,16 @@ public class SimuladorRastroHSR {
             materAzul = sc.nextInt();
 
             materRoxo += materAzul / 3;
+            tentativas = Math.ceil(materRoxo / 3.5);
+            double tempoTotalSeg = tentativas * 90;
+            horas = (int) tempoTotalSeg / 3600;
+            tempoRastro = ((int) tempoTotalSeg % 3600) / 60;
+            qtdPoderNec = tentativas * 60;
+            tempoEspera = Math.ceil((qtdPoderNec - poderTotal) * 6) / 60;
 
             System.out.println("Gostaria de colocar mais informacoes sobre a quantidade de P. de Desbravemnto que voce tem disponivel? (s/n)");
             respMaisInfo = sc.next().toLowerCase().charAt(0);
+            System.out.println("---------------------------------------------");
 
             if (respMaisInfo == 's') {
                 System.out.println("---------------------------------------------");
@@ -42,12 +49,6 @@ public class SimuladorRastroHSR {
                 System.out.println("---------------------------------------------");
 
                 poderTotal = qtdPoder + qtdReserva + (qtdCombus * 60);
-                tentativas = Math.ceil(materRoxo / 3.5);
-                double tempoTotalSeg = tentativas * 90;
-                horas = (int) tempoTotalSeg / 3600;
-                tempoRastro = ((int) tempoTotalSeg % 3600) / 60;
-                qtdPoderNec = tentativas * 60;
-                tempoEspera = Math.ceil((qtdPoderNec - poderTotal) * 6) / 60;
                 
                 if (poderTotal < qtdPoderNec) {
                     System.out.printf("Poder de desbravamento total %d%n", poderTotal );
@@ -78,3 +79,4 @@ public class SimuladorRastroHSR {
         sc.close();
     }
 }
+
