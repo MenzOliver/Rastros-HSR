@@ -58,6 +58,7 @@ public class SimuladorRastroHSR {
                 if (poderTotal < qtdPoderNec) {
                     System.out.printf("Poder de desbravamento total %d%n", poderTotal );
                     System.out.printf("Poder de desbravamento necessario %d%n", (int) qtdPoderNec );
+                    System.out.printf("Faltam %d pontos de desbravamento para conseguir completar o rastro.%n", (int) (qtdPoderNec - poderTotal) );
                     System.out.printf("Tempo de espera: %.2fhoras%n", tempoEspera);
                     System.out.println("---------------------------------------------");
                     System.out.printf("Tentativas: %d%n", (int) tentativas );
@@ -65,14 +66,16 @@ public class SimuladorRastroHSR {
                     System.out.println("---------------------------------------------");
                 } else {
                     System.out.printf("Tentativs: %d%n", (int) tentativas );
-                    System.out.printf("Qtd. de P. de Desbravamento %d%n", (int) qtdPoderNec );
                     System.out.printf("Tempo necessário: %dh e %dmin%n", horas, (int) tempoRastro);
+                    System.out.printf("Poder de desbravamento total %d%n", poderTotal );
+                    System.out.printf("Poder de desbravamento necessario %d%n", (int) qtdPoderNec );
+                    System.out.printf("Poder de desbravamento após subir de nivel: %d%n", (int) (poderTotal - qtdPoderNec) );
                     System.out.println("---------------------------------------------");
                 }
             } else {
                 System.out.printf("Tentativs: %d%n", (int) tentativas );
-                System.out.printf("Qtd. de P. de Desbravamento %d%n", (int) qtdPoderNec );
                 System.out.printf("Tempo necessário: %dh e %dmin%n", horas, (int) tempoRastro);
+                System.out.printf("Poder de desbravamento necessario %d%n", (int) qtdPoderNec );
                 System.out.println("---------------------------------------------");
             }
 
