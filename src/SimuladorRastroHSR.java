@@ -10,9 +10,9 @@ public class SimuladorRastroHSR {
         Scanner sc = new Scanner(System.in);
 
         char resp;
-        /*processo*/
+
         double tentativas = 0, tempoRastro = 0, qtdPoderNec = 0, tempoEspera = 0;
-        /*entrada de dados*/
+ 
         int materRoxo, materAzul, qtdPoder, qtdCombus, qtdReserva, poderTotal = 0, horas = 0;
         char respMaisInfo;
 
